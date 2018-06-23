@@ -1,0 +1,14 @@
+<ion-view view-title="KBA Cardiology" name="init-view">
+    <ion-content class="padding" scroll="false">
+        <div class="card" style="border:none;box-shadow:none;padding:30px 10px;text-align:center;">
+            <img src="./img/init-logo.png"/>
+        </div>
+        <div class="card" style="border:none;box-shadow:none;padding:15px 20px;text-align:center;">
+            <ion-spinner ng-show='status == loadingStatus.loading'></ion-spinner>
+            <button class='button button-dark' ng-show='status == loadingStatus.loadingFailed'
+              ng-click='tryAgain();'>Try again</button>
+            <button class='button button-dark' ng-show='status == loadingStatus.closed'
+              ng-click='tryAgain();'>Open</button>
+        </div>
+    </ion-content>
+</ion-view>
